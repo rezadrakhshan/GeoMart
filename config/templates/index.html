@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,14 +15,14 @@
 
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all-fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/nice-select.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{% static "assets/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/all-fontawesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/animate.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/magnific-popup.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/jquery-ui.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/nice-select.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
 </head>
 <body dir="rtl">
 
@@ -108,7 +109,7 @@
                 <div class="col-5 col-lg-3 col-xl-3">
                     <div class="header-middle-logo">
                         <a class="navbar-brand" href="index-2.html">
-                            <img src="assets/img/logo/logo.png" alt="logo">
+                            <img src="{% static "assets/img/logo/logo.png" %}" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -155,7 +156,7 @@
                                         <li>
                                             <div class="dropdown-cart-item">
                                                 <div class="cart-img">
-                                                    <a href="#"><img src="assets/img/product/p47.png" alt="#"></a>
+                                                    <a href="#"><img src="{% static "assets/img/product/p47.png" %}" alt="#"></a>
                                                 </div>
                                                 <div class="cart-info">
                                                     <h4><a href="#">ایکسا ها ای 15 قرمز</a></h4>
@@ -169,7 +170,7 @@
                                         <li>
                                             <div class="dropdown-cart-item">
                                                 <div class="cart-img">
-                                                    <a href="#"><img src="assets/img/product/p12.png" alt="#"></a>
+                                                    <a href="#"><img src="{% static "assets/img/product/p12.png" %}" alt="#"></a>
                                                 </div>
                                                 <div class="cart-info">
                                                     <h4><a href="#">ساعت آبی اپل</a></h4>
@@ -183,7 +184,7 @@
                                         <li>
                                             <div class="dropdown-cart-item">
                                                 <div class="cart-img">
-                                                    <a href="#"><img src="assets/img/product/p32.png" alt="#"></a>
+                                                    <a href="#"><img src="{% static "assets/img/product/p32.png" %}" alt="#"></a>
                                                 </div>
                                                 <div class="cart-info">
                                                     <h4><a href="#">ژاکت نارنجی</a></h4>
@@ -215,7 +216,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container position-relative">
                 <a class="navbar-brand" href="index-2.html">
-                    <img src="assets/img/logo/logo.png" class="logo-scrolled" alt="logo">
+                    <img src="{% static "assets/img/logo/logo.png" %}" class="logo-scrolled" alt="logo">
                 </a>
                 <div class="category-all">
                     <button class="category-btn" type="button">
@@ -224,38 +225,38 @@
                     <ul class="main-category">
                         <li>
                             <a href="#">
-                                <img src="assets/img/icon/shopping-bag.svg" alt>
+                                <img src="{% static "assets/img/icon/shopping-bag.svg" %}" alt>
                                 <span>موارد جدید</span><i class="far fa-angle-left"></i>
                             </a>
                             <ul class="sub-category">
-                                <li><a href="#"><img src="assets/img/icon/dress.svg" alt><span>لوازم جانبی</span></a>
+                                <li><a href="#"><img src="{% static "assets/img/icon/dress.svg" %}" alt><span>لوازم جانبی</span></a>
                                 </li>
-                                <li><a href="#"><img src="assets/img/icon/laptop.svg" alt><span>الکترونیک</span></a>
+                                <li><a href="#"><img src="{% static "assets/img/icon/laptop.svg" %}" alt><span>الکترونیک</span></a>
                                 </li>
-                                <li><a href="#"><img src="assets/img/icon/grocery.svg" alt><span>خواربارفروشی و بازار</span></a>
+                                <li><a href="#"><img src="{% static "assets/img/icon/grocery.svg" %}" alt><span>خواربارفروشی و بازار</span></a>
                                 </li>
-                                <li><a href="#"><img src="assets/img/icon/music.svg" alt><span>موسیقی و صدا</span></a>
+                                <li><a href="#"><img src="{% static "assets/img/icon/music.svg" %}" alt><span>موسیقی و صدا</span></a>
                                 </li>
-                                <li><a href="#"><img src="assets/img/icon/furniture.svg"
+                                <li><a href="#"><img src="{% static "assets/img/icon/furniture.svg" %}"
                                                      alt><span>خانه و مبلمان</span></a></li>
-                                <li><a href="#"><img src="assets/img/icon/toy.svg"
+                                <li><a href="#"><img src="{% static "assets/img/icon/toy.svg" %}"
                                                      alt><span>اسباب بازی و بازی های ویدیویی</span></a></li>
-                                <li><a href="#"><img src="assets/img/icon/gifts.svg" alt><span>هدایا</span></a></li>
-                                <li><a href="#"><img src="assets/img/icon/mother.svg" alt><span>کودکان و مادران</span></a>
+                                <li><a href="#"><img src="{% static "assets/img/icon/gifts.svg" %}" alt><span>هدایا</span></a></li>
+                                <li><a href="#"><img src="{% static "assets/img/icon/mother.svg" %}" alt><span>کودکان و مادران</span></a>
                                 </li>
-                                <li><a href="#"><img src="assets/img/icon/beauty.svg"
+                                <li><a href="#"><img src="{% static "assets/img/icon/beauty.svg" %}"
                                                      alt><span>سلامت و زیبایی</span></a></li>
-                                <li><a href="#"><img src="assets/img/icon/sports.svg" alt><span>ورزش و فضای باز</span></a>
+                                <li><a href="#"><img src="{% static "assets/img/icon/sports.svg" %}" alt><span>ورزش و فضای باز</span></a>
                                 </li>
-                                <li><a href="#"><img src="assets/img/icon/garden.svg" alt><span>خانه و باغ</span></a>
+                                <li><a href="#"><img src="{% static "assets/img/icon/garden.svg" %}" alt><span>خانه و باغ</span></a>
                                 </li>
-                                <li><a href="#"><img src="assets/img/icon/automotive.svg"
+                                <li><a href="#"><img src="{% static "assets/img/icon/automotive.svg" %}"
                                                      alt><span>خودرو</span></a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/img/icon/dress.svg" alt>
+                                <img src="{% static "assets/img/icon/dress.svg" %}" alt>
                                 <span>مد و لوازم جانبی</span><i class="far fa-angle-left"></i>
                             </a>
                             <div class="sub-category-mega">
@@ -264,7 +265,7 @@
                                         <div class="category-single">
                                             <a href="#" class="category-title">خرید کودکان</a>
                                             <div class="category-img mb-3">
-                                                <img src="assets/img/category/01.jpg" alt="#">
+                                                <img src="{% static "assets/img/category/01.jpg" %}" alt="#">
                                             </div>
                                             <div class="category-link">
                                                 <a href="#">اسباب‌بازی‌های کودکان</a>
@@ -278,7 +279,7 @@
                                         <div class="category-single">
                                             <a href="#" class="category-title">خرید مردانه</a>
                                             <div class="category-img mb-3">
-                                                <img src="assets/img/category/02.jpg" alt="#">
+                                                <img src="{% static "assets/img/category/02.jpg" %}" alt="#">
                                             </div>
                                             <div class="category-link">
                                                 <a href="#">تماشا کنید</a>
@@ -292,7 +293,7 @@
                                         <div class="category-single">
                                             <a href="#" class="category-title">خرید زنانه</a>
                                             <div class="category-img mb-3">
-                                                <img src="assets/img/category/03.jpg" alt="#">
+                                                <img src="{% static "assets/img/category/03.jpg" %}" alt="#">
                                             </div>
                                             <div class="category-link">
                                                 <a href="#">پیراهن زنانه</a>
@@ -307,7 +308,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/img/icon/laptop.svg" alt>
+                                <img src="{% static "assets/img/icon/laptop.svg" %}" alt>
                                 <span>الکترونیک</span><i class="far fa-angle-left"></i>
                             </a>
                             <div class="sub-category-mega">
@@ -347,7 +348,7 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="category-img">
-                                            <a href="#"><img src="assets/img/category/04.jpg" alt></a>
+                                            <a href="#"><img src="{% static "assets/img/category/04.jpg" %}" alt></a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3">
@@ -385,7 +386,7 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="category-img">
-                                            <a href="#"><img src="assets/img/category/05.jpg" alt></a>
+                                            <a href="#"><img src="{% static "assets/img/category/05.jpg" %}" alt></a>
                                         </div>
                                     </div>
                                 </div>
@@ -393,7 +394,7 @@
                         </li>
                         <li>
                             <a href="#">
-                                <img src="assets/img/icon/grocery.svg" alt>
+                                <img src="{% static "assets/img/icon/grocery.svg" %}" alt>
                                 <span>خواربارفروشی و بازار</span><i class="far fa-angle-left"></i>
                             </a>
                             <div class="sub-category-mega">
@@ -489,10 +490,10 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#"><img src="assets/img/icon/music.svg" alt><span>موسیقی و صدا</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/music.svg" %}" alt><span>موسیقی و صدا</span></a></li>
                         <li>
                             <a href="#">
-                                <img src="assets/img/icon/furniture.svg" alt>
+                                <img src="{% static "assets/img/icon/furniture.svg" %}" alt>
                                 <span>خانه و مبلمان</span><i class="far fa-angle-left"></i>
                             </a>
                             <div class="sub-category-mega">
@@ -532,19 +533,19 @@
                                     </div>
                                     <div class="col-lg-3">
                                         <div class="category-img">
-                                            <a href="#"><img src="assets/img/category/04.jpg" alt></a>
+                                            <a href="#"><img src="{% static "assets/img/category/04.jpg" %}" alt></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#"><img src="assets/img/icon/toy.svg" alt><span>اسباب بازی و بازی های ویدئویی</span></a></li>
-                        <li><a href="#"><img src="assets/img/icon/gifts.svg" alt><span>هدایا</span></a></li>
-                        <li><a href="#"><img src="assets/img/icon/mother.svg" alt><span>کودکان و مادران</span></a></li>
-                        <li><a href="#"><img src="assets/img/icon/beauty.svg" alt><span>سلامت و زیبایی</span></a></li>
-                        <li><a href="#"><img src="assets/img/icon/sports.svg" alt><span>ورزش و فضای باز</span></a></li>
-                        <li><a href="#"><img src="assets/img/icon/garden.svg" alt><span>خانه و باغ</span></a></li>
-                        <li><a href="#"><img src="assets/img/icon/automotive.svg" alt><span>خودرو</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/toy.svg" %}" alt><span>اسباب بازی و بازی های ویدئویی</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/gifts.svg" %}" alt><span>هدایا</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/mother.svg" %}" alt><span>کودکان و مادران</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/beauty.svg" %}" alt><span>سلامت و زیبایی</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/sports.svg" %}" alt><span>ورزش و فضای باز</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/garden.svg" %}" alt><span>خانه و باغ</span></a></li>
+                        <li><a href="#"><img src="{% static "assets/img/icon/automotive.svg" %}" alt><span>خودرو</span></a></li>
                     </ul>
                 </div>
                 <div class="mobile-menu-right">
@@ -713,7 +714,7 @@
                                             </div>
                                             <div class="col-12 col-lg-4">
                                                 <div class="mega-menu-img">
-                                                    <a href="#"><img src="assets/img/banner/mega-menu-banner.jpg"
+                                                    <a href="#"><img src="{% static "assets/img/banner/mega-menu-banner.jpg" %}"
                                                                      alt></a>
                                                 </div>
                                             </div>
@@ -807,7 +808,7 @@
                             <div class="col-md-12 col-lg-6 col-xl-4">
                                 <div class="hero-right">
                                     <div class="hero-img">
-                                        <img src="assets/img/slider/hero-1.png" alt data-animation="fadeInRight"
+                                        <img src="{% static "assets/img/slider/hero-1.png" %}" alt data-animation="fadeInRight"
                                              data-delay=".25s">
                                     </div>
                                 </div>
@@ -837,7 +838,7 @@
                             <div class="col-md-12 col-lg-6 col-xl-4">
                                 <div class="hero-right">
                                     <div class="hero-img">
-                                        <img src="assets/img/slider/hero-2.png" alt data-animation="fadeInRight"
+                                        <img src="{% static "assets/img/slider/hero-2.png" %}" alt data-animation="fadeInRight"
                                              data-delay=".25s">
                                     </div>
                                 </div>
@@ -867,7 +868,7 @@
                             <div class="col-md-12 col-lg-6 col-xl-4">
                                 <div class="hero-right">
                                     <div class="hero-img">
-                                        <img src="assets/img/slider/hero-3.png" alt data-animation="fadeInRight"
+                                        <img src="{% static "assets/img/slider/hero-3.png" %}" alt data-animation="fadeInRight"
                                              data-delay=".25s">
                                     </div>
                                 </div>
@@ -897,7 +898,7 @@
                             <div class="col-md-12 col-lg-6 col-xl-4">
                                 <div class="hero-right">
                                     <div class="hero-img">
-                                        <img src="assets/img/slider/hero-4.png" alt data-animation="fadeInRight"
+                                        <img src="{% static "assets/img/slider/hero-4.png" %}" alt data-animation="fadeInRight"
                                              data-delay=".25s">
                                     </div>
                                 </div>
@@ -915,7 +916,7 @@
             <div class="row">
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="banner-item">
-                        <img src="assets/img/banner/mini-banner-1.jpg" alt>
+                        <img src="{% static "assets/img/banner/mini-banner-1.jpg" %}" alt>
                         <div class="banner-content">
                             <p>مجموعه های داغ</p>
                             <h3> بهترین فروش سفر <br>مجموعه‌های </h3>
@@ -925,7 +926,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="banner-item">
-                        <img src="assets/img/banner/mini-banner-2.jpg" alt>
+                        <img src="{% static "assets/img/banner/mini-banner-2.jpg" %}" alt>
                         <div class="banner-content">
                             <p>مجموعه‌های اپل</p>
                             <h3>ساعت هوشمند اپل <br> کالکشن</h3>
@@ -935,7 +936,7 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <div class="banner-item">
-                        <img src="assets/img/banner/mini-banner-3.jpg" alt>
+                        <img src="{% static "assets/img/banner/mini-banner-3.jpg" %}" alt>
                         <div class="banner-content">
                             <p>مجموعه‌های کفش</p>
                             <h3>فصل تابستان <br> کفش تا <span>50%</span> تخفیف</h3>
@@ -953,7 +954,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/category.svg" alt>رده برتر</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/category.svg" %}" alt>رده برتر</h2>
                         <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -964,7 +965,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/dress.svg" alt>
+                                    <img src="{% static "assets/img/icon/dress.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>لوازم جانبی</h4>
@@ -979,7 +980,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/laptop.svg" alt>
+                                    <img src="{% static "assets/img/icon/laptop.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>الکترونیک</h4>
@@ -994,7 +995,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/grocery.svg" alt>
+                                    <img src="{% static "assets/img/icon/grocery.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4> خواربارفروشی و بازار</h4>
@@ -1009,7 +1010,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/music.svg" alt>
+                                    <img src="{% static "assets/img/icon/music.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>موسیقی و صدا</h4>
@@ -1024,7 +1025,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/furniture.svg" alt>
+                                    <img src="{% static "assets/img/icon/furniture.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>مبلمان</h4>
@@ -1039,7 +1040,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/toy.svg" alt>
+                                    <img src="{% static "assets/img/icon/toy.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>اسباب بازی </h4>
@@ -1054,7 +1055,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/gifts.svg" alt>
+                                    <img src="{% static "assets/img/icon/gifts.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>هدایا</h4>
@@ -1069,7 +1070,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/mother.svg" alt>
+                                    <img src="{% static "assets/img/icon/mother.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>کودکان و مادران</h4>
@@ -1084,7 +1085,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/beauty.svg" alt>
+                                    <img src="{% static "assets/img/icon/beauty.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>سلامتی و زیبایی</h4>
@@ -1099,7 +1100,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/sports.svg" alt>
+                                    <img src="{% static "assets/img/icon/sports.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>ورزش و فضای باز</h4>
@@ -1114,7 +1115,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/garden.svg" alt>
+                                    <img src="{% static "assets/img/icon/garden.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>خانه و باغ</h4>
@@ -1129,7 +1130,7 @@
                         <a href="#">
                             <div class="category-info">
                                 <div class="icon">
-                                    <img src="assets/img/icon/automotive.svg" alt>
+                                    <img src="{% static "assets/img/icon/automotive.svg" %}" alt>
                                 </div>
                                 <div class="content">
                                     <h4>خودرو</h4>
@@ -1149,7 +1150,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/trending.svg" alt>موارد پرطرفدار</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/trending.svg" %}" alt>موارد پرطرفدار</h2>
                         <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -1158,7 +1159,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type new">جدید</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p1.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p1.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip" title="نمایش سریع"><i class="far fa-eye"></i></a>
@@ -1191,7 +1192,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type hot">داغ</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p3.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p3.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1225,7 +1226,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type oos">در انبار موجود نیست</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p4.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p4.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1259,7 +1260,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p5.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p5.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1293,7 +1294,7 @@
                 </div>
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
-                        <a href="shop-single.html"><img src="assets/img/product/p6.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p6.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1334,7 +1335,7 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="banner-item">
-                        <img src="assets/img/banner/mid-banner-1.jpg" alt>
+                        <img src="{% static "assets/img/banner/mid-banner-1.jpg" %}" alt>
                         <div class="banner-content">
                             <p>مجموعه های برتر</p>
                             <h3> مد زنانه <br> تا <span>40%</span> تخفیف</h3>
@@ -1344,7 +1345,7 @@
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="banner-item">
-                        <img src="assets/img/banner/mid-banner-2.jpg" alt>
+                        <img src="{% static "assets/img/banner/mid-banner-2.jpg" %}" alt>
                         <div class="banner-content">
                             <p>فروش هدفون</p>
                             <h3>فروش هدفون <br> تا <span>50%</span> تخفیف</h3>
@@ -1362,7 +1363,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/hot.svg" alt>موارد داغ</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/hot.svg" %}" alt>موارد داغ</h2>
                         <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -1371,7 +1372,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type new">جدید</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p7.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p7.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1405,7 +1406,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type hot">داغ</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p8.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p8.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1439,7 +1440,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type oos">در انبار موجود نیست</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p12.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p12.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1473,7 +1474,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p14.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p14.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1507,7 +1508,7 @@
                 </div>
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
-                        <a href="shop-single.html"><img src="assets/img/product/p11.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p11.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1548,7 +1549,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/new.svg" alt>موارد جدید</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/new.svg" %}" alt>موارد جدید</h2>
                         <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -1557,7 +1558,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type new">جدید</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p31.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p31.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1591,7 +1592,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type new">جدید</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p33.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p33.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1625,7 +1626,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type new">جدید</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p37.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p37.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1659,7 +1660,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type new">جدید</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p44.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p44.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1694,7 +1695,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type new">جدید</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p48.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p48.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -1732,7 +1733,7 @@
 
     <div class="big-banner">
         <div class="container">
-            <div class="banner-wrap" style="background-image: url(assets/img/banner/big-banner.jpg);">
+            <div class="banner-wrap" style="background-image: url({% static "assets/img/banner/big-banner.jpg" %});">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <div class="banner-content">
@@ -1755,29 +1756,29 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/brand.svg" alt>برندهای محبوب</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/brand.svg" %}" alt>برندهای محبوب</h2>
                         <a href="#">همه برندها <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
             </div>
             <div class="brand-slider owl-carousel owl-theme" dir="ltr">
                 <div class="brand-item">
-                    <img src="assets/img/brand/01.png" alt>
+                    <img src="{% static "assets/img/brand/01.png" %}" alt>
                 </div>
                 <div class="brand-item">
-                    <img src="assets/img/brand/02.png" alt>
+                    <img src="{% static "assets/img/brand/02.png" %}" alt>
                 </div>
                 <div class="brand-item">
-                    <img src="assets/img/brand/03.png" alt>
+                    <img src="{% static "assets/img/brand/03.png" %}" alt>
                 </div>
                 <div class="brand-item">
-                    <img src="assets/img/brand/04.png" alt>
+                    <img src="{% static "assets/img/brand/04.png" %}" alt>
                 </div>
                 <div class="brand-item">
-                    <img src="assets/img/brand/05.png" alt>
+                    <img src="{% static "assets/img/brand/05.png" %}" alt>
                 </div>
                 <div class="brand-item">
-                    <img src="assets/img/brand/06.png" alt>
+                    <img src="{% static "assets/img/brand/06.png" %}" alt>
                 </div>
             </div>
         </div>
@@ -1807,7 +1808,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="site-heading-inline">
-                                <h2 class="site-title"><img src="assets/img/icon/product-list.svg" alt>تلفن های همراه
+                                <h2 class="site-title"><img src="{% static "assets/img/icon/product-list.svg" %}" alt>تلفن های همراه
                                 </h2>
                                 <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                             </div>
@@ -1818,7 +1819,7 @@
                             <div class="product-item" dir="rtl">
                                 <div class="product-img">
                                     <span class="type new">جدید</span>
-                                    <a href="shop-single.html"><img src="assets/img/product/p15.png" alt></a>
+                                    <a href="shop-single.html"><img src="{% static "assets/img/product/p15.png" %}" alt></a>
                                     <div class="product-action-wrap">
                                         <div class="product-action">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -1855,7 +1856,7 @@
                             <div class="product-item" dir="rtl">
                                 <div class="product-img">
                                     <span class="type hot">داغ</span>
-                                    <a href="shop-single.html"><img src="assets/img/product/p16.png" alt></a>
+                                    <a href="shop-single.html"><img src="{% static "assets/img/product/p16.png" %}" alt></a>
                                     <div class="product-action-wrap">
                                         <div class="product-action">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -1892,7 +1893,7 @@
                             <div class="product-item" dir="rtl">
                                 <div class="product-img">
                                     <span class="type oos">در انبار موجود نیست</span>
-                                    <a href="shop-single.html"><img src="assets/img/product/p17.png" alt></a>
+                                    <a href="shop-single.html"><img src="{% static "assets/img/product/p17.png" %}" alt></a>
                                     <div class="product-action-wrap">
                                         <div class="product-action">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -1929,7 +1930,7 @@
                             <div class="product-item" dir="rtl">
                                 <div class="product-img">
                                     <span class="type discount">10% تخفیف</span>
-                                    <a href="shop-single.html"><img src="assets/img/product/p18.png" alt></a>
+                                    <a href="shop-single.html"><img src="{% static "assets/img/product/p18.png" %}" alt></a>
                                     <div class="product-action-wrap">
                                         <div class="product-action">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -1966,7 +1967,7 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="product-item" dir="rtl">
                                 <div class="product-img">
-                                    <a href="shop-single.html"><img src="assets/img/product/p19.png" alt></a>
+                                    <a href="shop-single.html"><img src="{% static "assets/img/product/p19.png" %}" alt></a>
                                     <div class="product-action-wrap">
                                         <div class="product-action">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2002,7 +2003,7 @@
                         <div class="col-md-6 col-lg-4">
                             <div class="product-item" dir="rtl">
                                 <div class="product-img">
-                                    <a href="shop-single.html"><img src="assets/img/product/p20.png" alt></a>
+                                    <a href="shop-single.html"><img src="{% static "assets/img/product/p20.png" %}" alt></a>
                                     <div class="product-action-wrap">
                                         <div class="product-action">
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2047,7 +2048,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/discount.svg" alt>کالای با تخفیف بزرگ</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/discount.svg" %}" alt>کالای با تخفیف بزرگ</h2>
                         <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -2056,7 +2057,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p11.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p11.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -2091,7 +2092,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p30.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p30.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -2126,7 +2127,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p36.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p36.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -2161,7 +2162,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p52.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p52.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -2196,7 +2197,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p56.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p56.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -2231,7 +2232,7 @@
                 <div class="product-item" dir="rtl">
                     <div class="product-img">
                         <span class="type discount">10% تخفیف</span>
-                        <a href="shop-single.html"><img src="assets/img/product/p57.png" alt></a>
+                        <a href="shop-single.html"><img src="{% static "assets/img/product/p57.png" %}" alt></a>
                         <div class="product-action-wrap">
                             <div class="product-action">
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#quickview" data-tooltip="tooltip"
@@ -2273,7 +2274,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/best-seller.svg" alt>پرفروش ترین ها</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/best-seller.svg" %}" alt>پرفروش ترین ها</h2>
                         <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -2282,7 +2283,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/01.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/01.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه سریع</a>
                     </div>
@@ -2290,7 +2291,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/02.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/02.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه بورسلا</a>
                     </div>
@@ -2298,7 +2299,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/03.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/03.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه فرادل</a>
                     </div>
@@ -2306,7 +2307,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/04.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/04.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه لوریکا</a>
                     </div>
@@ -2314,7 +2315,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/05.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/05.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه مد</a>
                     </div>
@@ -2322,7 +2323,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/06.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/06.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه سریع</a>
                     </div>
@@ -2330,7 +2331,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/07.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/07.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه سباستین</a>
                     </div>
@@ -2338,7 +2339,7 @@
                 <div class="col">
                     <div class="seller-item">
                         <div class="seller-img">
-                            <a href="#"><img src="assets/img/seller/08.png" alt></a>
+                            <a href="#"><img src="{% static "assets/img/seller/08.png" %}" alt></a>
                         </div>
                         <a href="#" class="seller-title">فروشگاه جیوروکس</a>
                     </div>
@@ -2353,7 +2354,7 @@
             <div class="row g-0">
                 <div class="col-12 col-lg-6">
                     <div class="deal-img">
-                        <img src="assets/img/deal/01.jpg" alt="#">
+                        <img src="{% static "assets/img/deal/01.jpg" %}" alt="#">
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 align-self-center">
@@ -2388,7 +2389,7 @@
                         <h2 class="product-list-title">در فروش</h2>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p39.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p39.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2409,7 +2410,7 @@
                         </div>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p2.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p2.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2430,7 +2431,7 @@
                         </div>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p3.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p3.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2456,7 +2457,7 @@
                         <h2 class="product-list-title">پرفروش ترین</h2>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p4.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p4.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2477,7 +2478,7 @@
                         </div>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p5.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p5.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2498,7 +2499,7 @@
                         </div>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p6.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p6.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2524,7 +2525,7 @@
                         <h2 class="product-list-title">برترین رتبه</h2>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p7.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p7.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2545,7 +2546,7 @@
                         </div>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p8.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p8.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2566,7 +2567,7 @@
                         </div>
                         <div class="product-list-item">
                             <div class="product-list-img">
-                                <a href="shop-single.html"><img src="assets/img/product/p26.png" alt="#"></a>
+                                <a href="shop-single.html"><img src="{% static "assets/img/product/p26.png" %}" alt="#"></a>
                             </div>
                             <div class="product-list-content">
                                 <h4><a href="shop-single.html">عینک پلیسی عالی</a></h4>
@@ -2649,7 +2650,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="site-heading-inline">
-                        <h2 class="site-title"><img src="assets/img/icon/more.svg" alt>موارد بیشتر برای شما</h2>
+                        <h2 class="site-title"><img src="{% static "assets/img/icon/more.svg" %}" alt>موارد بیشتر برای شما</h2>
                         <a href="#">مشاهده بیشتر <i class="fas fa-arrow-left"></i></a>
                     </div>
                 </div>
@@ -2659,7 +2660,7 @@
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
                             <span class="type new">جدید</span>
-                            <a href="shop-single.html"><img src="assets/img/product/p2.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p2.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2696,7 +2697,7 @@
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
                             <span class="type hot">داغ</span>
-                            <a href="shop-single.html"><img src="assets/img/product/p5.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p5.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2733,7 +2734,7 @@
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
                             <span class="type oos">در انبار موجود نیست</span>
-                            <a href="shop-single.html"><img src="assets/img/product/p9.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p9.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2770,7 +2771,7 @@
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
                             <span class="type discount">10% تخفیف</span>
-                            <a href="shop-single.html"><img src="assets/img/product/p22.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p22.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2808,7 +2809,7 @@
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
                             <span class="type oos">در انبار موجود نیست</span>
-                            <a href="shop-single.html"><img src="assets/img/product/p25.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p25.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2845,7 +2846,7 @@
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
                             <span class="type new">جدید</span>
-                            <a href="shop-single.html"><img src="assets/img/product/p26.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p26.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2881,7 +2882,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3">
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
-                            <a href="shop-single.html"><img src="assets/img/product/p27.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p27.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2918,7 +2919,7 @@
                     <div class="product-item" dir="rtl">
                         <div class="product-img">
                             <span class="type">پرطرفدار</span>
-                            <a href="shop-single.html"><img src="assets/img/product/p30.png" alt></a>
+                            <a href="shop-single.html"><img src="{% static "assets/img/product/p30.png" %}" alt></a>
                             <div class="product-action-wrap">
                                 <div class="product-action">
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#quickview"
@@ -2970,7 +2971,7 @@
                 <div class="testimonial-item">
                     <div class="testimonial-author">
                         <div class="testimonial-author-img">
-                            <img src="assets/img/testimonial/01.jpg" alt>
+                            <img src="{% static "assets/img/testimonial/01.jpg" %}" alt>
                         </div>
                         <div class="testimonial-author-info">
                             <h4>سیلویا اچ گرین</h4>
@@ -2990,12 +2991,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-quote-icon"><img src="assets/img/icon/quote.svg" alt></div>
+                    <div class="testimonial-quote-icon"><img src="{% static "assets/img/icon/quote.svg" %}" alt></div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-author">
                         <div class="testimonial-author-img">
-                            <img src="assets/img/testimonial/02.jpg" alt>
+                            <img src="{% static "assets/img/testimonial/02.jpg" %}" alt>
                         </div>
                         <div class="testimonial-author-info">
                             <h4>گوردو نواک</h4>
@@ -3015,12 +3016,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-quote-icon"><img src="assets/img/icon/quote.svg" alt></div>
+                    <div class="testimonial-quote-icon"><img src="{% static "assets/img/icon/quote.svg" %}" alt></div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-author">
                         <div class="testimonial-author-img">
-                            <img src="assets/img/testimonial/03.jpg" alt>
+                            <img src="{% static "assets/img/testimonial/03.jpg" %}" alt>
                         </div>
                         <div class="testimonial-author-info">
                             <h4>ریدا بیت </h4>
@@ -3040,12 +3041,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-quote-icon"><img src="assets/img/icon/quote.svg" alt></div>
+                    <div class="testimonial-quote-icon"><img src="{% static "assets/img/icon/quote.svg" %}" alt></div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-author">
                         <div class="testimonial-author-img">
-                            <img src="assets/img/testimonial/04.jpg" alt>
+                            <img src="{% static "assets/img/testimonial/04.jpg" %}" alt>
                         </div>
                         <div class="testimonial-author-info">
                             <h4>پارکر خیمنز</h4>
@@ -3065,12 +3066,12 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-quote-icon"><img src="assets/img/icon/quote.svg" alt></div>
+                    <div class="testimonial-quote-icon"><img src="{% static "assets/img/icon/quote.svg" %}" alt></div>
                 </div>
                 <div class="testimonial-item">
                     <div class="testimonial-author">
                         <div class="testimonial-author-img">
-                            <img src="assets/img/testimonial/05.jpg" alt>
+                            <img src="{% static "assets/img/testimonial/05.jpg" %}" alt>
                         </div>
                         <div class="testimonial-author-info">
                             <h4>هرولی نز</h4>
@@ -3090,7 +3091,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <div class="testimonial-quote-icon"><img src="assets/img/icon/quote.svg" alt></div>
+                    <div class="testimonial-quote-icon"><img src="{% static "assets/img/icon/quote.svg" %}" alt></div>
                 </div>
             </div>
         </div>
@@ -3111,7 +3112,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-item wow fadeInUp" data-wow-delay=".25s">
                         <div class="blog-item-img">
-                            <img src="assets/img/blog/01.jpg" alt="Thumb">
+                            <img src="{% static "assets/img/blog/01.jpg" %}" alt="Thumb">
                         </div>
                         <div class="blog-item-info">
                             <div class="blog-item-meta">
@@ -3132,7 +3133,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-item wow fadeInDown" data-wow-delay=".25s">
                         <div class="blog-item-img">
-                            <img src="assets/img/blog/02.jpg" alt="Thumb">
+                            <img src="{% static "assets/img/blog/02.jpg" %}" alt="Thumb">
                         </div>
                         <div class="blog-item-info">
                             <div class="blog-item-meta">
@@ -3153,7 +3154,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-item wow fadeInUp" data-wow-delay=".25s">
                         <div class="blog-item-img">
-                            <img src="assets/img/blog/03.jpg" alt="Thumb">
+                            <img src="{% static "assets/img/blog/03.jpg" %}" alt="Thumb">
                         </div>
                         <div class="blog-item-info">
                             <div class="blog-item-meta">
@@ -3196,10 +3197,10 @@
             </div>
         </div>
         <div class="newsletter-img-1">
-            <img src="assets/img/newsletter/01.png" alt>
+            <img src="{% static "assets/img/newsletter/01.png" %}" alt>
         </div>
         <div class="newsletter-img-2">
-            <img src="assets/img/newsletter/02.png" alt>
+            <img src="{% static "assets/img/newsletter/02.png" %}" alt>
         </div>
     </div>
 
@@ -3212,7 +3213,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="footer-widget-box about-us">
                         <a href="#" class="footer-logo">
-                            <img src="assets/img/logo/logo-light.png" alt>
+                            <img src="{% static "assets/img/logo/logo-light.png" %}" alt>
                         </a>
                         <p class="mb-1">
                             ما انواع مختلفی از معابر در دسترس داریم، اما عمده آن دچار تغییر شده است
@@ -3341,11 +3342,11 @@
                     <div class="col-12 col-lg-4 align-self-center">
                         <div class="footer-payment">
                             <span>می پذیریم:</span>
-                            <img src="assets/img/payment/visa.svg" alt>
-                            <img src="assets/img/payment/mastercard.svg" alt>
-                            <img src="assets/img/payment/amex.svg" alt>
-                            <img src="assets/img/payment/discover.svg" alt>
-                            <img src="assets/img/payment/paypal.svg" alt>
+                            <img src="{% static "assets/img/payment/visa.svg" %}" alt>
+                            <img src="{% static "assets/img/payment/mastercard.svg" %}" alt>
+                            <img src="{% static "assets/img/payment/amex.svg" %}" alt>
+                            <img src="{% static "assets/img/payment/discover.svg" %}" alt>
+                            <img src="{% static "assets/img/payment/paypal.svg" %}" alt>
                         </div>
                     </div>
                     <div class="col-12 col-lg-4 align-self-center">
@@ -3381,7 +3382,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <img src="assets/img/product/p11.png" alt="#">
+                        <img src="{% static "assets/img/product/p11.png" %}" alt="#">
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div class="quickview-content">
@@ -3434,7 +3435,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="popup-banner-img">
-                                <img src="assets/img/banner/popup-banner.jpg" alt>
+                                <img src="{% static "assets/img/banner/popup-banner.jpg" %}" alt>
                             </div>
                         </div>
                         <div class="col-lg-6 align-self-center">
@@ -3455,21 +3456,21 @@
 
 
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html"></script>
-<script src="assets/js/jquery-3.6.0.min.js"></script>
-<script src="assets/js/modernizr.min.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/imagesloaded.pkgd.min.js"></script>
-<script src="assets/js/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/jquery.appear.min.js"></script>
-<script src="assets/js/jquery.easing.min.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/counter-up.js"></script>
-<script src="assets/js/jquery-ui.min.js"></script>
-<script src="assets/js/jquery.nice-select.min.js"></script>
-<script src="assets/js/countdown.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="{% static "assets/js/jquery-3.6.0.min.js" %}"></script>
+<script src="{% static "assets/js/modernizr.min.js" %}"></script>
+<script src="{% static "assets/js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "assets/js/imagesloaded.pkgd.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.magnific-popup.min.js" %}"></script>
+<script src="{% static "assets/js/isotope.pkgd.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.appear.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.easing.min.js" %}"></script>
+<script src="{% static "assets/js/owl.carousel.min.js" %}"></script>
+<script src="{% static "assets/js/counter-up.js" %}"></script>
+<script src="{% static "assets/js/jquery-ui.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.nice-select.min.js" %}"></script>
+<script src="{% static "assets/js/countdown.min.js" %}"></script>
+<script src="{% static "assets/js/wow.min.js" %}"></script>
+<script src="{% static "assets/js/main.js" %}"></script>
 </body>
 
 <!-- Mirrored from theme-script.ir/templates/goemart/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Oct 2024 15:25:08 GMT -->
