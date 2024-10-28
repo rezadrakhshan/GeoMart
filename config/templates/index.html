@@ -3097,7 +3097,7 @@
         </div>
     </div>
 
-
+    {% if blogs %}
     <div class="blog-area py-90">
         <div class="container">
             <div class="row">
@@ -3109,72 +3109,32 @@
                 </div>
             </div>
             <div class="row">
+                {% for i in blogs %}
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-item wow fadeInUp" data-wow-delay=".25s">
                         <div class="blog-item-img">
-                            <img src="{% static "assets/img/blog/01.jpg" %}" alt="Thumb">
+                            <img src="{{i.banner.url}}" alt="Thumb">
                         </div>
                         <div class="blog-item-info">
                             <div class="blog-item-meta">
                                 <ul>
-                                    <li><a href="#"><i class="far fa-user-circle"></i> توسط آلیشیا دیویس</a></li>
-                                    <li><a href="#"><i class="far fa-calendar-alt"></i> 29 بهمن 1402</a></li>
+                                    <li><a href="#"><i class="far fa-user-circle"></i>{{i.author}}</a></li>
+                                    <li><a href="#"><i class="far fa-calendar-alt"></i>{{i.date}}</a></li>
                                 </ul>
                             </div>
                             <h4 class="blog-title">
-                                <a href="#">تغییرهای زیادی از قسمت‌های موجود وجود دارد که اکثر آنها دچار مشکل شده‌اند.</a>
+                                <a href="#">{{i.title}}</a>
                             </h4>
-                            <p>تغییرهای زیادی وجود دارد که اکثر آنها دچار تغییرات تصادفی شده‌اند
-                                کلمات.</p>
+                            <p>{{i.description}}</p>
                             <a class="theme-btn" href="#">بیشتر بخوانید<i class="fas fa-arrow-left-long"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-item wow fadeInDown" data-wow-delay=".25s">
-                        <div class="blog-item-img">
-                            <img src="{% static "assets/img/blog/02.jpg" %}" alt="Thumb">
-                        </div>
-                        <div class="blog-item-info">
-                            <div class="blog-item-meta">
-                                <ul>
-                                    <li><a href="#"><i class="far fa-user-circle"></i> توسط آلیشیا دیویس</a></li>
-                                    <li><a href="#"><i class="far fa-calendar-alt"></i> 29 بهمن 1402</a></li>
-                                </ul>
-                            </div>
-                            <h4 class="blog-title">
-                                <a href="#">تغییرهای زیادی از قسمت‌های موجود وجود دارد که اکثر آنها دچار مشکل شده‌اند.</a>
-                            </h4>
-                            <p>تغییرهای زیادی وجود دارد که اکثر آنها دچار تغییرات تصادفی شده‌اند
-                                کلمات.</p>
-                            <a class="theme-btn" href="#">بیشتر بخوانید<i class="fas fa-arrow-left-long"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-item wow fadeInUp" data-wow-delay=".25s">
-                        <div class="blog-item-img">
-                            <img src="{% static "assets/img/blog/03.jpg" %}" alt="Thumb">
-                        </div>
-                        <div class="blog-item-info">
-                            <div class="blog-item-meta">
-                                <ul>
-                                    <li><a href="#"><i class="far fa-user-circle"></i> توسط آلیشیا دیویس</a></li>
-                                    <li><a href="#"><i class="far fa-calendar-alt"></i> 29 بهمن 1402</a></li>
-                                </ul>
-                            </div>
-                            <h4 class="blog-title">
-                                <a href="#">تغییرهای زیادی از قسمت‌های موجود وجود دارد که اکثر آنها دچار مشکل شده‌اند.</a>
-                            </h4>
-                            <p>تغییرهای زیادی وجود دارد که اکثر آنها دچار تغییرات تصادفی شده‌اند
-                                کلمات.</p>
-                            <a class="theme-btn" href="#">بیشتر بخوانید<i class="fas fa-arrow-left-long"></i></a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+    {% endif %}
 
 
     <div class="newsletter-area pt-60 pb-60">
