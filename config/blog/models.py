@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 import uuid
 from ckeditor_uploader.fields import RichTextUploadingField
 from django_jsonform.models.fields import ArrayField
+from extensions.utils import jalali_converter
 
 # Create your models here.
 
@@ -18,3 +19,6 @@ class Blog(models.Model):
     is_published = models.BooleanField(default=False)
     num_of_likes = models.IntegerField(default=0)
     tags = ArrayField(models.CharField(max_length=10, blank=True), size=8)
+
+    def jpublish(self):
+        return jalali_converter(self.date)
