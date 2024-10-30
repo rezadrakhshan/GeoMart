@@ -5,7 +5,7 @@ from blog.models import Blog
 
 
 def home(request):
-    blog = Blog.objects.all()
+    blog = Blog.objects.filter(is_published=True)[:3]
     context = {
         "blogs":blog
     }
