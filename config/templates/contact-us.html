@@ -23,9 +23,15 @@
     <link rel="stylesheet" href="{% static "assets/css/jquery-ui.min.css" %}">
     <link rel="stylesheet" href="{% static "assets/css/nice-select.min.css" %}">
     <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
-
+<style>
+    .contact-form{
+        overflow: hidden;
+        max-height: 540px;
+    }
+</style>
 <div class="preloader">
     <div class="loader-ripple">
         <div></div>
@@ -120,13 +126,13 @@
                                 <p>این یک واقعیت ثابت شده است که خواننده از خواندنی ها حواسش پرت می شود
                                     محتوای یک صفحه کلماتی که حتی اندکی هنگام نگاه کردن به طرح آن. </p>
                             </div>
-                            <form method="post">
+                            <form method="post" id="contact-form">
                                 {% csrf_token %}
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <input type="text" class="form-control" name="name" placeholder="نام "
-                                                   required>
+                                               required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -196,7 +202,7 @@
 
 <a href="#" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
 
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script data-cfasync="false" src="{% static "../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html" %}"></script>
 <script src="{% static "assets/js/jquery-3.6.0.min.js" %}"></script>
 <script src="{% static "assets/js/modernizr.min.js" %}"></script>
@@ -214,6 +220,7 @@
 <script src="{% static "assets/js/wow.min.js" %}"></script>
 <script src="{% static "assets/js/contact-form.js" %}"></script>
 <script src="{% static "assets/js/main.js" %}"></script>
+<script src="{% static "assets/js/custome.js" %}"></script>
 </body>
 
 <!-- Mirrored from theme-script.ir/templates/goemart/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Oct 2024 15:25:59 GMT -->
