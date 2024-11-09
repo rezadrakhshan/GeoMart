@@ -1,1 +1,42 @@
-<p>{{ message }}</p>
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ارتباط با ما</title>
+    <style>
+        *{
+            text-align: right;
+            direction: rtl;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            margin: 0%;
+        }
+        h1{
+            background-color: #081828;
+            color: white;
+            padding: 5vh;
+        }
+        a{
+            text-decoration: none;
+            color: #11b76b;
+        }
+        footer{
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="direction: ltr;text-align: left;">GoeMart</h1>
+    <div>
+        <p>پیام جدید از طرف {{name}}</p>
+        <p>{{message}}</p>
+        <span>ایمیل:{{email}}</span>
+    </div>
+    <footer>
+        <span>@حق چاپ 2024 <a href="">گومارت</a> کلیه حقوق محفوظ است</span>
+    </footer>
+</body>
+</html>

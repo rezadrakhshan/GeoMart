@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from theme-script.ir/templates/goemart/mail-success.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Oct 2024 15:25:59 GMT -->
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content>
+    <meta name="keywords" content>
+
+    <title>گومارت - الگوی HTML5 تجارت الکترونیک چند منظوره</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static "assets/img/logo/favicon.png" %}">
+
+    <link rel="stylesheet" href="{% static "assets/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/all-fontawesome.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/animate.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/magnific-popup.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/jquery-ui.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/nice-select.min.css" %}">
+    <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+</head>
+<body>
+
+<div class="preloader">
+    <div class="loader-ripple">
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+
+{% include "include/header.html" %}
+
+<main class="main">
+
+    <div class="site-breadcrumb">
+        <div class="site-breadcrumb-bg" style="background: url({% static "assets/img/breadcrumb/01.jpg" %})"></div>
+        <div class="container">
+            <div class="site-breadcrumb-wrap">
+                <h4 class="breadcrumb-title">موفقیت ایمیل</h4>
+                <ul class="breadcrumb-menu">
+                    <li><a href="{% url "main:home" %}"><i class="far fa-home"></i> صفحه اصلی</a></li>
+                    <li class="active">موفقیت ایمیل</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mail-success py-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 mx-auto">
+                    <div class="mail-success-content">
+                        <div class="mail-success-icon"><i class="fal fa-envelope-circle-check"></i></div>
+                        <h3>ایمیل شما با موفقیت ارسال شد!.</h3>
+                        <p>تنوع‌های زیادی از قسمت‌های لورم اپسیوم وجود دارد، اما اکثریت آن‌ها را دارند
+                            دچار تغییر به شکلی شده است، توسط شوخ طبعی تزریق شده، یا کلمات تصادفی که به نظر نمی رسند
+                            حتی کمی قابل باور است.</p>
+                        <a href="{% url "main:home" %}" class="theme-btn">به خانه برگرد<i class="far fa-home"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="newsletter-area pt-60 pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="newsletter-content">
+                        <h3>دریافت کوپن تخفیف <span>20%</span></h3>
+                        <p>با مشترک شدن در خبرنامه ما</p>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="email" class="form-control" placeholder="آدرس ایمیل معتبر شما">
+                                <button class="theme-btn" type="submit">
+                                    اشتراک <i class="far fa-paper-plane"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-img-1">
+            <img src="{% static "assets/img/newsletter/01.png" %}" alt>
+        </div>
+        <div class="newsletter-img-2">
+            <img src="{% static "assets/img/newsletter/02.png" %}" alt>
+        </div>
+    </div>
+
+</main>
+
+{% include "include/footer.html" %}
+
+
+<a href="#" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
+
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html"></script>
+<script src="{% static "assets/js/jquery-3.6.0.min.js" %}"></script>
+<script src="{% static "assets/js/modernizr.min.js" %}"></script>
+<script src="{% static "assets/js/bootstrap.bundle.min.js" %}"></script>
+<script src="{% static "assets/js/imagesloaded.pkgd.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.magnific-popup.min.js" %}"></script>
+<script src="{% static "assets/js/isotope.pkgd.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.appear.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.easing.min.js" %}"></script>
+<script src="{% static "assets/js/owl.carousel.min.js" %}"></script>
+<script src="{% static "assets/js/counter-up.js" %}"></script>
+<script src="{% static "assets/js/jquery-ui.min.js" %}"></script>
+<script src="{% static "assets/js/jquery.nice-select.min.js" %}"></script>
+<script src="{% static "assets/js/countdown.min.js" %}"></script>
+<script src="{% static "assets/js/wow.min.js" %}"></script>
+<script src="{% static "assets/js/main.js" %}"></script>
+</body>
+
+<!-- Mirrored from theme-script.ir/templates/goemart/mail-success.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Oct 2024 15:25:59 GMT -->
+</html>
