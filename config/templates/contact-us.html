@@ -23,14 +23,18 @@
     <link rel="stylesheet" href="{% static "assets/css/jquery-ui.min.css" %}">
     <link rel="stylesheet" href="{% static "assets/css/nice-select.min.css" %}">
     <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <body>
 <style>
     .contact-form{
         overflow: hidden;
         max-height: 540px;
     }
+    .toast-error {
+    direction: rtl;
+    text-align: right;
+}
+
 </style>
 <div class="preloader">
     <div class="loader-ripple">
@@ -202,7 +206,8 @@
 
 <a href="#" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script data-cfasync="false" src="{% static "../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html" %}"></script>
 <script src="{% static "assets/js/jquery-3.6.0.min.js" %}"></script>
 <script src="{% static "assets/js/modernizr.min.js" %}"></script>

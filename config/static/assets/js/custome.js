@@ -4,6 +4,24 @@ function hasWhiteSpace(s) {
   return s.indexOf(" ") >= 0;
 }
 
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+};
+
 contactUsForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const formValue = [
@@ -15,18 +33,7 @@ contactUsForm.addEventListener("submit", (e) => {
 
   for (const element of formValue) {
     if (!element || hasWhiteSpace(element)) {
-        Toastify({
-            text: "لطفا تمام مقادیر را وارد کنید!",
-            duration: 5000,
-            destination: "https://github.com/apvarun/toastify-js",
-            newWindow: true,
-            gravity: "top",
-            position: "right",
-            stopOnFocus: true,
-            style: {
-              background: "linear-gradient(to right, #ff5f6d, #ffc371)",
-            },
-          }).showToast();
+      toastr.error('لطفا تمامی مقادیر را وارد کنید!');
       return;
     }
   }
