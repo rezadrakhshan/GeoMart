@@ -31,14 +31,19 @@ def contact_us(request):
         )
         email.attach_alternative(html_content, "text/html")
         email.send()
-        html_content = render_to_string(
-            "email/contact_user_message.html"
-        )
+        html_content = render_to_string("email/contact_user_message.html")
         text_content = strip_tags(html_content)
         email2 = EmailMultiAlternatives(
-            "پیام شما دریافت شد - از ارتباط شما سپاسگزاریم!", text_content, EMAIL_HOST_USER, [user_email]
+            "پیام شما دریافت شد - از ارتباط شما سپاسگزاریم!",
+            text_content,
+            EMAIL_HOST_USER,
+            [user_email],
         )
         email2.attach_alternative(html_content, "text/html")
         email2.send()
         return render(request, "email/mail-success.html")
     return render(request, "contact-us.html")
+
+
+def faq(request):
+    return render(request, "faq.html")
