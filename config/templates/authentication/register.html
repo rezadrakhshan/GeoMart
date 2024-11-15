@@ -23,7 +23,13 @@
     <link rel="stylesheet" href="{% static "assets/css/jquery-ui.min.css" %}">
     <link rel="stylesheet" href="{% static "assets/css/nice-select.min.css" %}">
     <link rel="stylesheet" href="{% static "assets/css/style.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
+<style>
+.custom-toast-width {
+    width: 500px;
+}
+</style>
 <body>
 
 <div class="preloader">
@@ -60,21 +66,23 @@
                         <img src="{% static "assets/img/logo/logo.png" %}" alt>
                         <p>حساب گومارت رایگان خود را ایجاد کنید</p>
                     </div>
-                    <form action="#">
+                    <span id="email-error" style="color: red;"></span>
+                    <form method="post" id="register-form">
+                        {% csrf_token %}
                         <div class="form-group">
                             <label>نام کامل</label>
-                            <input type="text" class="form-control" placeholder="نام شما">
+                            <input required name="name" type="text" class="form-control" placeholder="نام شما">
                         </div>
                         <div class="form-group">
                             <label>آدرس ایمیل</label>
-                            <input type="email" class="form-control" placeholder="ایمیل شما">
+                            <input required name="email" id="email" type="email" class="form-control" placeholder="ایمیل شما">
                         </div>
                         <div class="form-group">
                             <label>رمز عبور</label>
-                            <input type="password" class="form-control" placeholder="گذرواژه شما">
+                            <input required name="password" type="password" class="form-control" placeholder="گذرواژه شما">
                         </div>
                         <div class="form-check form-group">
-                            <input class="form-check-input" type="checkbox" value id="agree">
+                            <input required class="form-check-input" type="checkbox" value id="agree">
                             <label class="form-check-label" for="agree">
                                 من با <a href="#">شرایط خدمات</a> موافقم
                             </label>
@@ -84,7 +92,7 @@
                         </div>
                     </form>
                     <div class="login-footer">
-                        <p>از قبل حساب کاربری دارید؟ <a href="{% url "authentication:login" %}">ورود شوید.</a></p>
+                        <p>از قبل حساب کاربری دارید؟ <a href="">ورود شوید.</a></p>
                         <div class="social-login">
                             <span class="social-divider">یا</span>
                             <p>ادامه با رسانه های اجتماعی</p>
@@ -135,7 +143,8 @@
 
 <a href="#" id="scroll-top"><i class="far fa-arrow-up-from-arc"></i></a>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.html"></script>
 <script src="{% static "assets/js/jquery-3.6.0.min.js" %}"></script>
 <script src="{% static "assets/js/modernizr.min.js" %}"></script>
@@ -152,6 +161,7 @@
 <script src="{% static "assets/js/countdown.min.js" %}"></script>
 <script src="{% static "assets/js/wow.min.js" %}"></script>
 <script src="{% static "assets/js/main.js" %}"></script>
+<script src="{% static "assets/js/authentication.js" %}"></script>
 </body>
 
 <!-- Mirrored from theme-script.ir/templates/goemart/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Oct 2024 15:25:58 GMT -->
