@@ -1,4 +1,5 @@
-const form = document.querySelector("#register-form");
+const registerForm = document.querySelector("#register-form");
+
 
 toastr.options = {
   toastClass: "custom-toast-width",
@@ -19,7 +20,7 @@ toastr.options = {
   hideMethod: "fadeOut",
 };
 
-form.addEventListener("submit", (e) => {
+registerForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const value = {
     name: e.target.name.value,
@@ -46,9 +47,13 @@ form.addEventListener("submit", (e) => {
             );
             return;
           }
-          form.submit();
+          registerForm.submit();
         }
       })
       .catch((error) => console.error("Error:", error));
   }
 });
+
+
+
+
