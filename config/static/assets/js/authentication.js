@@ -1,6 +1,5 @@
 const registerForm = document.querySelector("#register-form");
 
-
 toastr.options = {
   toastClass: "custom-toast-width",
   closeButton: true,
@@ -28,32 +27,40 @@ registerForm.addEventListener("submit", (e) => {
     password: e.target.password.value,
   };
   if (value.email) {
-    fetch(`/auth/check-email/?email=${value.email}`)
+    fetch(`/auth/check-username/?username=${value.name}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.exists) {
-          toastr.error("این ایمیل قبلاً ثبت شده است.");
+          toastr.error("این نام کاربری قبلاً ثبت شده است.");
           return;
         } else {
-          for (const key in value) {
-            if (!value[key] || value[key].trim() === "") {
-              toastr.error("لطفا تمام مقادیر را وارد کنید!");
-              return;
-            }
-          }
-          if (value.password.length < 4) {
-            toastr.error(
-              "رمز عبور باید حداقل 4 کاراکتر باشد. لطفاً یک رمز عبور معتبر وارد کنید."
-            );
-            return;
-          }
-          registerForm.submit();
+          fetch(`/auth/check-email/?email=${value.email}`)
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.exists) {
+                toastr.error("این ایمیل قبلاً ثبت شده است.");
+                return;
+              } else {
+                for (const key in value) {
+                  if (!value[key] || value[key].trim() === "") {
+                    toastr.error("لطفا تمام مقادیر را وارد کنید!");
+                    return;
+                  }
+                }
+                if (value.password.length < 4) {
+                  toastr.error(
+                    "رمز عبور باید حداقل 4 کاراکتر باشد. لطفاً یک رمز عبور معتبر وارد کنید."
+                  );
+                  return;
+                }
+                registerForm.submit();
+              }
+            })
+            .catch((error) => console.error("Error:", error));
         }
       })
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   }
 });
-
-
-
-

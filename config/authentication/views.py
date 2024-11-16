@@ -36,6 +36,12 @@ def check_email(request):
     return JsonResponse(response)
 
 
+def check_username(request):
+    username = request.GET.get("username", None)
+    response = {"exists": User.objects.filter(username=username).exists()}
+    return JsonResponse(response)
+
+
 def ajax_login(request):
     if request.method == "POST":
         email = request.POST.get("email")
