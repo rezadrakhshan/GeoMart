@@ -1,9 +1,13 @@
-from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
 from django.contrib import auth
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from config.settings import EMAIL_HOST_USER
+from random import randint
 
 # Create your views here.
 
@@ -53,3 +57,19 @@ def ajax_login(request):
         else:
             return JsonResponse({"success": False, "error": "Invalid credentials"})
     return JsonResponse({"success": False, "error": "Only POST method is allowed"})
+
+
+def send_code(request):
+    email = request.GET.get("email", None)
+    code = randint(1000,9999)
+    html_content = render_to_string("email/authentication_code.html", {"code": code})
+    text_content = strip_tags(html_content)
+    email2 = EmailMultiAlternatives(
+        "پیام شما دریافت شد - از ارتباط شما سپاسگزاریم!",
+        text_content,
+        EMAIL_HOST_USER,
+        [email],
+    )
+    email2.attach_alternative(html_content, "text/html")
+    email2.send()
+    return JsonResponse({"code": code})

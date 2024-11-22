@@ -1,4 +1,7 @@
 const registerForm = document.querySelector("#register-form");
+const formGroup = document.querySelectorAll(".form-group");
+const loginArea = document.querySelector(".login-area");
+const loader = document.querySelector(".preloader");
 
 toastr.options = {
   toastClass: "custom-toast-width",
@@ -53,7 +56,40 @@ registerForm.addEventListener("submit", (e) => {
                   );
                   return;
                 }
-                registerForm.submit();
+                loginArea.style.display = "none";
+                loader.style.display = "block";
+                fetch(`/auth/send_code/?email=${value.email}`)
+                  .then((response) => response.json())
+                  .then((data) => {
+                    formGroup.forEach((element) => {
+                      element.style.display = "none";
+                    });
+                    document.querySelector(".login-footer").remove();
+                    document.querySelector(".submit-button").remove();
+                    registerForm.insertAdjacentHTML(
+                      "afterbegin",
+                      `
+                      <div class="form-group">
+                            <label>کد تایید:</label>
+                            <input required name="code" type="text" class="form-control code" placeholder="کد تایید را وارد کنید ..">
+                        </div>
+                      `
+                    );
+                    loginArea.style.display = "block";
+                    loader.style.display = "none";
+                    document
+                      .querySelector(".code")
+                      .addEventListener("input", (e) => {
+                        if (e.target.value == data.code) {
+                          document.querySelector(".code").style.border =
+                            "1px solid green";
+                          registerForm.submit();
+                        } else {
+                          document.querySelector(".code").style.border =
+                            "1px solid red";
+                        }
+                      });
+                  });
               }
             })
             .catch((error) => console.error("Error:", error));
