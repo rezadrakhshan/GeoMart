@@ -65,7 +65,7 @@ def send_code(request):
     html_content = render_to_string("email/authentication_code.html", {"code": code})
     text_content = strip_tags(html_content)
     email2 = EmailMultiAlternatives(
-        "پیام شما دریافت شد - از ارتباط شما سپاسگزاریم!",
+        "کد ورود",
         text_content,
         EMAIL_HOST_USER,
         [email],

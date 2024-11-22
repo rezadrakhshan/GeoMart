@@ -1,7 +1,6 @@
 const registerForm = document.querySelector("#register-form");
 const formGroup = document.querySelectorAll(".form-group");
-const loginArea = document.querySelector(".login-area");
-const loader = document.querySelector(".preloader");
+const submitButton = document.querySelector(".submit-button");
 
 toastr.options = {
   toastClass: "custom-toast-width",
@@ -56,8 +55,10 @@ registerForm.addEventListener("submit", (e) => {
                   );
                   return;
                 }
-                loginArea.style.display = "none";
-                loader.style.display = "block";
+                submitButton.innerText = "";
+                submitButton.innerHTML = `
+                <i class="fa fa-spinner fa-spin"></i>
+                `
                 fetch(`/auth/send_code/?email=${value.email}`)
                   .then((response) => response.json())
                   .then((data) => {
@@ -65,7 +66,7 @@ registerForm.addEventListener("submit", (e) => {
                       element.style.display = "none";
                     });
                     document.querySelector(".login-footer").remove();
-                    document.querySelector(".submit-button").remove();
+                    submitButton.remove();
                     registerForm.insertAdjacentHTML(
                       "afterbegin",
                       `
@@ -75,8 +76,6 @@ registerForm.addEventListener("submit", (e) => {
                         </div>
                       `
                     );
-                    loginArea.style.display = "block";
-                    loader.style.display = "none";
                     document
                       .querySelector(".code")
                       .addEventListener("input", (e) => {

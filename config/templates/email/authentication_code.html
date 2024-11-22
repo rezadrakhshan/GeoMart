@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoMart</title>
+    <title>ارتباط با ما</title>
+    <style>
+        *{
+            text-align: right;
+            direction: rtl;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            margin: 0%;
+        }
+        h1{
+            background-color: #081828;
+            color: white;
+            padding: 5vh;
+        }
+        a{
+            text-decoration: none;
+            color: #11b76b;
+        }
+        footer{
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>{{code}}</h1>
+    <h1 style="direction: ltr;text-align: left;">GoeMart</h1>
+    <div>
+        <p>کاربر گرامی،
+
+            کد تأیید ورود شما به حساب کاربری:</p>
+        <p style="text-align: center;">{{code}}</p>
+        <p>لطفاً این کد را در بخش مربوطه وارد نمایید تا فرآیند ورود شما تکمیل شود.
+            در صورتی که این درخواست توسط شما انجام نشده است، لطفاً این ایمیل را نادیده گرفته یا با تیم پشتیبانی ما تماس حاصل فرمایید.</p>
+            <p>با احترام،
+                تیم پشتیبانی گومارت</p>
+    </div>
+    <footer>
+        <span>@حق چاپ 2024 <a href="">گومارت</a> کلیه حقوق محفوظ است</span>
+    </footer>
 </body>
 </html>
