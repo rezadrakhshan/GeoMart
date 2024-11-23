@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "ckeditor",
     "ckeditor_uploader",
     "django_jsonform",
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -117,8 +118,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Authentication backend
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # Default backend
-    'authentication.backends.EmailAuthBackend'
+    'django.contrib.auth.backends.ModelBackend',
+    'authentication.backends.EmailAuthBackend',
+    'social_core.backends.google.GoogleOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
 ]
 
 
@@ -177,3 +181,13 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv("EMAIL")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASSWORD")
+
+
+# Social Authentication
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_ON_GET = True
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.getenv("SOCIAL_AUTH_GOOGLE_OAUTH2_KEY")
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv("SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET")
