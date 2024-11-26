@@ -185,6 +185,7 @@ EMAIL_HOST_PASSWORD = os.getenv("EMAIL_PASSWORD")
 
 # Social Authentication
 
+LOGIN_URL = 'authentication:login'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_ON_GET = True

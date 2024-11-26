@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.contrib.auth.hashers import make_password
+from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
@@ -29,7 +30,7 @@ def register(request):
         auth.login(
             request, user_object, backend="django.contrib.auth.backends.ModelBackend"
         )
-        return redirect("main:home")
+        return redirect("authentication:profile")
 
     return render(request, "authentication/register.html")
 
@@ -73,3 +74,8 @@ def send_code(request):
     email2.attach_alternative(html_content, "text/html")
     email2.send()
     return JsonResponse({"code": code})
+
+
+@login_required
+def profile(request):
+    return render (request,"user/profile.html")

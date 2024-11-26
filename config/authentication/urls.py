@@ -11,4 +11,5 @@ urlpatterns = [
     path("check-username/", check_username, name="check_username"),
     path("ajax_login/", ajax_login, name="ajax_login"),
     path("send_code/", send_code, name="send_code"),
+    path("profile/", profile, name="profile"),
 ]
