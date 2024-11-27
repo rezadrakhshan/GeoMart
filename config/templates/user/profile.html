@@ -55,41 +55,7 @@
     <div class="user-area bg py-100">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3">
-                    <div class="sidebar">
-                        <div class="sidebar-top">
-                            <div class="sidebar-profile-img">
-                                <img src="{% static "assets/img/account/user.jpg" %}" alt>
-                                <button type="button" class="profile-img-btn"><i class="far fa-camera"></i></button>
-                                <input type="file" class="profile-img-file">
-                            </div>
-                            <h5>آنتونی جانسون</h5>
-                            <p><a href="https://theme-script.ir/cdn-cgi/l/email-protection" class="__cf_email__"
-                                  data-cfemail="0c6d62786362654c69746d617c6069226f6361">ad@info.com</a></p>
-                        </div>
-                        <ul class="sidebar-list">
-                            <li><a href="user-dashboard.html"><i class="far fa-gauge-high"></i> داشبورد</a></li>
-                            <li><a class="active" href="user-profile.html"><i class="far fa-user"></i> نمایه من</a>
-                            </li>
-                            <li><a href="order-list.html"><i class="far fa-shopping-bag"></i> فهرست سفارشات من <span
-                                    class="badge badge-danger">02</span></a></li>
-                            <li><a href="wishlist.html"><i class="far fa-heart"></i> فهرست علاقمندی های من <span
-                                    class="badge badge-danger">02</span></a></li>
-                            <li><a href="address-list.html"><i class="far fa-location-dot"></i> فهرست آدرس</a></li>
-                            <li><a href="support-ticket.html"><i class="far fa-headset"></i> بلیط‌های پشتیبانی <span
-                                    class="badge badge-danger">02</span></a></li>
-                            <li><a href="track-order.html"><i class="far fa-map-location-dot"></i> سفارش من را پیگیری کنید</a>
-                            </li>
-                            <li><a href="payment-method.html"><i class="far fa-wallet"></i> روش‌های پرداخت</a></li>
-                            <li><a href="user-notification.html"><i class="far fa-bell"></i> اعلان <span
-                                    class="badge badge-danger">02</span></a></li>
-                            <li><a href="user-message.html"><i class="far fa-envelope"></i> پیام‌ها <span
-                                    class="badge badge-danger">02</span></a></li>
-                            <li><a href="user-setting.html"><i class="far fa-gear"></i> تنظیمات</a></li>
-                            <li><a href="#"><i class="far fa-sign-out"></i> خروج</a></li>
-                        </ul>
-                    </div>
-                </div>
+                {% include "user/include/sidebar.html" %}
                 <div class="col-lg-9">
                     <div class="user-wrapper">
                         <div class="row">
@@ -97,40 +63,41 @@
                                 <div class="user-card">
                                     <h4 class="user-card-title">اطلاعات نمایه</h4>
                                     <div class="user-form">
-                                        <form action="#">
+                                        <form method="post">
+                                            {% csrf_token %}
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>نام</label>
-                                                        <input type="text" class="form-control" value="آنتونیو"
+                                                        <input name="first_name" type="text" class="form-control" value=""
                                                                placeholder="نام">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>نام خانوادگی</label>
-                                                        <input type="text" class="form-control" value="جیسون"
+                                                        <input name="last_name" type="text" class="form-control" value=""
                                                                placeholder="نام خانوادگی">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>ایمیل</label>
-                                                        <input type="text" class="form-control"
-                                                               value="antoni@example.com" placeholder="ایمیل">
+                                                        <input name="email" type="text" class="form-control"
+                                                               value="antoni@example.com" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>تلفن</label>
-                                                        <input type="text" class="form-control" value="09666666666"
+                                                        <input name="phone" type="text" class="form-control" value=""
                                                                placeholder="تلفن">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <label>آدرس</label>
-                                                        <input type="text" class="form-control" value="نیویورک، ایالات متحده آمریکا"
+                                                        <input name="address" type="text" class="form-control" value=""
                                                                placeholder="آدرس">
                                                     </div>
                                                 </div>
